@@ -1,0 +1,10 @@
+What  is EJS -> Embeded Javascript 
+
+Till now we have been rendering all our html files in the server.js files
+After that we have rendering all the output by res.send("Details");
+
+All was diretly on the server , but what if we want that my input files and output files are both are html files and on the server.
+
+Till now we have been rendering out input page of html where user would give their input and output files was resm.send("Details"); , but now we have will give a output files as html
+
+We are going to use EJS templates for that ! 
