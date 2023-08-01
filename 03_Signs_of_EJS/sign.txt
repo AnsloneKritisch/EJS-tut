@@ -1,0 +1,56 @@
+Embedded JavaScript (EJS) is a popular template engine for Node.js and web applications. EJS allows you to embed dynamic content into HTML pages by using special tags. Below are some of the commonly used EJS tags along with their explanations:
+
+1. `<% ... %>`: Scriptlet tag
+   This tag is used for including JavaScript code that will be executed on the server side, but it will not generate any output in the rendered HTML. It is mainly used for control structures like loops and conditionals.
+
+   Example:
+   ```html
+   <% for (let i = 1; i <= 5; i++) { %>
+     <li>Item <%= i %></li>
+   <% } %>
+   ```
+
+2. `<%= variables  %>`: Output tag
+   This tag is used for evaluating and outputting the result of a JavaScript expression in the rendered HTML. It is commonly used to display dynamic data like variables or function return values.
+
+   Example:
+   ```html
+   <h1>Hello, <%= username %></h1>
+   ```
+
+3. `<%- ... %>`: Unescaped output tag
+   Similar to `<%= ... %>`, this tag is used to output the result of a JavaScript expression. However, it does not escape HTML entities, allowing you to insert raw HTML code. Use this with caution to avoid XSS vulnerabilities.
+
+   Example:
+   ```html
+   <div><%- rawHtmlContent %></div>
+   ```
+
+4. `<%# This is Comment  %>`: Comment tag
+   This tag allows you to include comments within the EJS template. The content inside this tag won't be rendered in the output.
+
+   Example:
+   ```html
+   <%# This is a comment and won't appear in the output %>
+   ```
+
+5. `<% include filename %>`: Include tag
+   This tag is used to include the content of another EJS file in the current template. It is useful for reusing common code across different views.
+
+   Example:
+   ```html
+   <% include header.ejs %>
+   <p>Page content goes here.</p>
+   <% include footer.ejs %>
+   ```
+
+6. `<% layout filename %>`: Layout tag
+   This tag sets the layout file for the current EJS file. The content of the current file will be inserted into the specified layout file at the position of `<%- body %>` in the layout.
+
+   Example:
+   ```html
+   <% layout 'layouts/main.ejs' %>
+   <h1>Page Content</h1>
+   ```
+
+These are some of the main EJS tags and their purposes. EJS provides a powerful way to generate dynamic HTML content and build dynamic web pages in Node.js applications.
