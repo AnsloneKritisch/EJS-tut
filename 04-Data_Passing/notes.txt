@@ -1,0 +1,14 @@
+so as we can see in index.js that the data rendering quite good , 
+because it have a fruite data which i render quite well in ejs file 
+
+
+now in without.js the server crashed why becasue it doesn't have any fruits 
+so ejs couldn't show the result and went creashing 
+
+solution is simply use local function given by expresss js 
+
+link -> https://expressjs.com/en/api.html#res.locals
+
+now we have to addd this local in our ejs file
+
+
